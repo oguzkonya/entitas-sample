@@ -19,7 +19,7 @@ public class HorizontalMovementSystem : IExecuteSystem
         foreach (GameEntity movingEntity in _movingEntities)
         {
             movingEntity.ReplacePosition(new Vector3(
-                Mathf.Cos(Time.time) * 5f,
+                Mathf.Cos(Time.time) * GameConfig.Instance.multiplier,
                 movingEntity.position.position.y,
                 movingEntity.position.position.z
             ));

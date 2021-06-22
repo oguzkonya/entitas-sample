@@ -20,7 +20,7 @@ public class VerticalMovementSystem : IExecuteSystem
         {
             movingEntity.ReplacePosition(new Vector3(
                 movingEntity.position.position.x,
-                Mathf.Sin(Time.time) * 5f,
+                Mathf.Sin(Time.time) * GameConfig.Instance.multiplier,
                 movingEntity.position.position.z
             ));
         }
