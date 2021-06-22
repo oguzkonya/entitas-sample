@@ -10,16 +10,22 @@ public static class GameComponentsLookup {
 
     public const int HorizontallyMoving = 0;
     public const int Position = 1;
+    public const int PositionListener = 2;
+    public const int UnityView = 3;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
         "HorizontallyMoving",
-        "Position"
+        "Position",
+        "PositionListener",
+        "UnityView"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(HorizontallyMovingComponent),
-        typeof(PositionComponent)
+        typeof(PositionComponent),
+        typeof(PositionListenerComponent),
+        typeof(UnityViewComponent)
     };
 }
