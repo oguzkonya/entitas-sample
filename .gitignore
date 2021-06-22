@@ -1,0 +1,52 @@
+# OS
+Thumbs.db
+.DS_Store
+
+# Base
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# IDEs
+**/bin/Debug
+**/bin/Release
+**/packages
+*.userprefs
+*.user
+test-results
+DerivedData
+xcuserdata
+
+# Jetbrains
+.idea
+[Aa]ssets/Plugins/Editor/JetBrains*
+
+# Visual Studio
+.vs
+
+# Visual Studio Code
+.vscode
+
+# Unity
+*.pidb.meta
+*.pdb.meta
+*.mdb.meta
+sysinfo.txt
+*.unitypackage
+Assembly-CSharp*.csproj
+*.sln
+
+# Entitas
+Jenny.zip
+Jenny.zip.meta
+*.userproperties
+
+# Gradle
+.gradle
+
+# Builds
+*.apk
