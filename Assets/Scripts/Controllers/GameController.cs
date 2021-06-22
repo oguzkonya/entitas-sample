@@ -13,6 +13,7 @@ public class GameController : MonoBehaviour
 			.Add(new InitializeGameSystem(Contexts.sharedInstance))
 
 			.Add(new HorizontalMovementSystem(Contexts.sharedInstance))
+			.Add(new VerticalMovementSystem(Contexts.sharedInstance))
 
 			.Add(new GameEventSystems(Contexts.sharedInstance))
 			;

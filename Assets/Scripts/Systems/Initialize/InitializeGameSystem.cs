@@ -17,6 +17,7 @@ public class InitializeGameSystem : IInitializeSystem
         var e = _contexts.game.CreateEntity();
         e.AddPosition(Vector3.zero);
         e.isHorizontallyMoving = true;
+        e.isVerticallyMoving = true;
 
         var playerView = Object.Instantiate(Resources.Load<GameObject>("Sphere")).GetComponent<GameObjectView>();
         playerView.Link(_contexts, e);
