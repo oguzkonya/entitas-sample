@@ -1,15 +1,20 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 
 
-public class #SCRIPTNAME# : ReactiveSystem<MyContextEntity> {
-	public MyReactiveSystem (Contexts contexts) : base(contexts.MyContext) {
-		// pass the context of interest to the base constructor
+public class #SCRIPTNAME# : ReactiveSystem<MyContextEntity> 
+{
+	private Contexts contexts;
+
+	public #SCRIPTNAME#(Contexts contexts) : base(contexts.game) 
+	{
+		_contexts = contexts;
 	}
 		
-	protected override ICollector<MyContextEntity> GetTrigger(IContext<MyContextEntity> context) {
+	protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context) 
+	{
 		// specify which component you are reacting to
 		// return context.CreateCollector(MyContextMatcher.MyComponent);
 
@@ -29,14 +34,19 @@ public class #SCRIPTNAME# : ReactiveSystem<MyContextEntity> {
 		// return context.CreateCollector(LevelMatcher.AnyOf(MyContextMatcher.Component1, MyContextMatcher.Component2),
 		//                                LevelMatcher.Component3.Removed(),
 		//                                LevelMatcher.AllOf(MyContextMatcher.C4, MyContextMatcher.C5).Added());
+		return null;
 	}
 		
-	protected override bool Filter(MyContextEntity entity) {
+	protected override bool Filter(GameEntity entity) 
+	{
 		// check for required components
+		return true;
 	}
 
-	protected override void Execute(List<MyContextEntity> entities) {
-		foreach (var e in entities) {
+	protected override void Execute(List<GameEntity> entities) 
+	{
+		foreach (var e in entities) 
+		{
 			// do stuff to the matched entities
 		}
 	}
