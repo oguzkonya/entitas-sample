@@ -4,9 +4,9 @@ using UnityEngine;
 using Entitas;
 
 
-public class #SCRIPTNAME# : ReactiveSystem<MyContextEntity> 
+public class #SCRIPTNAME# : ReactiveSystem<GameEntity> 
 {
-	private Contexts contexts;
+	private Contexts _contexts;
 
 	public #SCRIPTNAME#(Contexts contexts) : base(contexts.game) 
 	{
